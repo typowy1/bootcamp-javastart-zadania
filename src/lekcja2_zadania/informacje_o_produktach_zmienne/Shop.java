@@ -3,19 +3,18 @@ package lekcja2_zadania.informacje_o_produktach_zmienne;
 public class Shop {
     public static void main(String[] args) {
 
-        Product firstProduct = new Product();
-        firstProduct.firstProductName = "Mleko";
-        firstProduct.firstProductProducer = "Mlekowita";
-        firstProduct.firstProductPrice = 2.5;
+        Product product = new Product();
+        product.firstProductName = "Mleko";
+        product.firstProductProducer = "Mlekowita";
+        product.firstProductPrice = 2.5;
 
-        Product secondProduct = new Product();
-        secondProduct.secondProductName = "Czekolada";
-        secondProduct.secondProductProducer = "Wedel";
-        secondProduct.secondProductPrice = 2.19;
+        product.secondProductName = "Czekolada";
+        product.secondProductProducer = "Wedel";
+        product.secondProductPrice = 2.19;
 
-        System.out.println(firstProduct.firstProductName + " " + firstProduct.firstProductProducer + " "
-                + firstProduct.firstProductPrice + "zł");
-        System.out.println(secondProduct.secondProductName + " " + secondProduct.secondProductProducer + " "
-                + secondProduct.secondProductPrice + "zł");
+        System.out.println(product.firstProductName + " " + product.firstProductProducer + " "
+                + product.firstProductPrice + "zł");
+        System.out.println(product.secondProductName + " " + product.secondProductProducer + " "
+                + product.secondProductPrice + "zł");
     }
 }
