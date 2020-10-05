@@ -4,16 +4,16 @@ public class Shop {
     public static void main(String[] args) {
 
         Product firstProduct = new Product();
-        firstProduct.productName = "Mleko";
+        firstProduct.name = "Mleko";
         firstProduct.producer = "Mlekowita";
         firstProduct.price = 2.5;
 
         Product secondProduct = new Product();
-        secondProduct.productName = "Czekolada";
+        secondProduct.name = "Czekolada";
         secondProduct.producer = "Wedel";
         secondProduct.price = 2.19;
 
-        System.out.println(firstProduct.productName + " " + firstProduct.producer + " " + firstProduct.price + "zł");
-        System.out.println(secondProduct.productName + " " + secondProduct.producer + " " + secondProduct.price + "zł");
+        System.out.println(firstProduct.name + " " + firstProduct.producer + " " + firstProduct.price + "zł");
+        System.out.println(secondProduct.name + " " + secondProduct.producer + " " + secondProduct.price + "zł");
     }
 }
