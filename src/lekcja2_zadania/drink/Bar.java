@@ -32,5 +32,4 @@ public class Bar {
 
         System.out.println("Drink capacity: " + drink1.firstIngredients.ingredientsName + " = " + drinkCapacity + "L");
     }
-
 }
