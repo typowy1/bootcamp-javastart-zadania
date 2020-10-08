@@ -2,6 +2,7 @@ package lekcja3_zadanie3_Klasa_z_działaniami_matematycznymi;
 
 public class CalculatorBase {
 
+
     boolean isEven(int a) {
         return a % 2 == 0;
     }

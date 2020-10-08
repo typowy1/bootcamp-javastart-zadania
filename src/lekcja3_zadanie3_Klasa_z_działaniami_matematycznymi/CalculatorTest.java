@@ -2,6 +2,7 @@ package lekcja3_zadanie3_Klasa_z_działaniami_matematycznymi;
 
 public class CalculatorTest {
     public static void main(String[] args) {
+
         CalculatorBase calculator1 = new CalculatorBase();
         boolean even = calculator1.isEven(4);
         System.out.println("Czy to jest liczba parzysta: " + even);
