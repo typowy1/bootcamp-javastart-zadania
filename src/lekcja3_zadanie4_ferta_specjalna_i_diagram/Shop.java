@@ -28,6 +28,5 @@ public class Shop {
         specialOffer1.discountValue();
         specialOffer1.showSpecialOffer();
         product3.showProductWithCategory();
-
     }
 }
