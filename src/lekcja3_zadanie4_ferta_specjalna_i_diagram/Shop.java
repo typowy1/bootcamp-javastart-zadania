@@ -23,10 +23,24 @@ public class Shop {
         product4.showProductWithoutCategory();
         System.out.println();
 
-        SpecialOffer specialOffer1 = new SpecialOffer("Rabat: 20%", ", ważny 09.10.2020r. - 16.102020r.",
+        SpecialOffer specialOffer1 = new SpecialOffer("Rabat: 20%", ", ważny 09.10.2020r. - 16.10.2020r.",
                 0.2, product3);
-        specialOffer1.discountValue();
         specialOffer1.showSpecialOffer();
         product3.showProductWithCategory();
+        specialOffer1.priceAfterDiscount();
+        System.out.println();
+
+        SpecialOffer specialOffer2 = new SpecialOffer("Rabat: 30%", ", ważny 16.10.2020r. - 17.10.2020r.",
+                0.3, product3);
+        specialOffer2.showSpecialOffer();
+        product3.showProductWithCategory();
+        specialOffer2.priceAfterDiscount();
+        System.out.println();
+
+        SpecialOffer specialOffer3 = new SpecialOffer("Rabat: 10%", ", ważny 18.10.2020r. - 19.10.2020r.",
+                0.1, product3);
+        specialOffer3.showSpecialOffer();
+        product3.showProductWithCategory();
+        specialOffer3.priceAfterDiscount();
     }
 }

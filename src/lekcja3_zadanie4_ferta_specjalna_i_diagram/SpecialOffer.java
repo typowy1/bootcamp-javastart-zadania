@@ -15,8 +15,9 @@ public class SpecialOffer {
         product = p;
     }
 
-    void discountValue() {
-        product.price = product.price * (1 - discount);
+    void priceAfterDiscount() {
+        double result = product.price * (1 - discount);
+        System.out.println("Cena po rabacie: " + result + "zł");
     }
 
     void showSpecialOffer() {
