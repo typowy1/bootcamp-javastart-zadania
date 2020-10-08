@@ -8,9 +8,6 @@ public class Shelf {
     String colour;
     int age;
 
-    Shelf() {
-    }
-
     Shelf(double l, double w, double h, String c, int a) {
         length = l;
         width = w;
