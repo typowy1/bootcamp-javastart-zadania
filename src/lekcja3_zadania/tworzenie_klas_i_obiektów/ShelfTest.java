@@ -2,19 +2,8 @@ package lekcja3_zadania.tworzenie_klas_i_obiektów;
 
 public class ShelfTest {
     public static void main(String[] args) {
-        Shelf largeShelf = new Shelf();
-        largeShelf.length = 120;
-        largeShelf.height = 5.5;
-        largeShelf.width = 35.5;
-        largeShelf.colour = "Czarny";
-        largeShelf.age = 5;
-
-        Shelf smallShelf = new Shelf();
-        smallShelf.length = 55;
-        smallShelf.height = 4.5;
-        smallShelf.width = 30.5;
-        smallShelf.colour = "Biały";
-        smallShelf.age = 7;
+        Shelf largeShelf = new Shelf(120, 35.5, 5.5, "Czarny", 5);
+        Shelf smallShelf = new Shelf(55, 30.5, 4.5, "Biały", 7);
 
         System.out.println("Informacje o dużej półce:");
         System.out.println("Długość: " + largeShelf.length + "cm" + ", wysokość: " + largeShelf.height + "cm"

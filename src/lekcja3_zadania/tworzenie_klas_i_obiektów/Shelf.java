@@ -10,4 +10,12 @@ public class Shelf {
 
     Shelf() {
     }
+
+    Shelf(double l, double w, double h, String c, int a) {
+        length = l;
+        width = w;
+        height = h;
+        colour = c;
+        age = a;
+    }
 }
