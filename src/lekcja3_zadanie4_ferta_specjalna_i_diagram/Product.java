@@ -6,7 +6,6 @@ public class Product {
     double price;
     String description;
     Category category;
-    SpecialOffer specialOffer;
 
     Product(String n, double p, String d, Category c) {
         name = n;
