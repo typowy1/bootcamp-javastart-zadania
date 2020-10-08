@@ -1,4 +1,4 @@
-package lekcja3_zadania.tworzenie_klas_i_obiektów;
+package lekcja3_zadanie1.tworzenie_klas_i_obiektów;
 
 public class Shelf {
 
