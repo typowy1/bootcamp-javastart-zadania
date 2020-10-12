@@ -10,4 +10,8 @@ public class Square {
     public double getSide() {
         return side;
     }
+
+    double calculateArea() {
+        return Math.pow(getSide(), 2);
+    }
 }

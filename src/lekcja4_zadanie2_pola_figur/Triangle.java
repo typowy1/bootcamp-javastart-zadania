@@ -22,4 +22,8 @@ public class Triangle {
     public double getSideC() {
         return sideC;
     }
+
+    double calculatePerimeter() {
+        return getSideA() + getSideB() + getSideC();
+    }
 }
