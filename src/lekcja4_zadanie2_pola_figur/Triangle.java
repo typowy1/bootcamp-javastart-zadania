@@ -23,7 +23,7 @@ public class Triangle {
         return sideC;
     }
 
-    double calculatePerimeter() {
+    public double calculatePerimeter() {
         return getSideA() + getSideB() + getSideC();
     }
 }

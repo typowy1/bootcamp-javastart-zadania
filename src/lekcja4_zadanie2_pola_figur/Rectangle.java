@@ -17,7 +17,7 @@ public class Rectangle {
         return sideB;
     }
 
-    double calculatePerimeter() {
+    public double calculatePerimeter() {
         return 2 * getSideA() + 2 * getSideB();
     }
 }

@@ -11,7 +11,7 @@ public class Square {
         return side;
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return Math.pow(getSide(), 2);
     }
 }
