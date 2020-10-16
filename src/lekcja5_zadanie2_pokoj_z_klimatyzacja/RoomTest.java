@@ -14,35 +14,35 @@ public class RoomTest {
                 40);
 
         System.out.println(room1.getInfo());
-        System.out.println(room1.loweringTemperatureAndCheck());
+        System.out.println(room1.lowerTemperatureAndCheck());
         System.out.println();
         System.out.println(room1.getTemperatureInfoAfterLoweringTemperature());
 
         System.out.println();
 
         System.out.println(room2.getInfo());
-        System.out.println(room2.loweringTemperatureAndCheck());
+        System.out.println(room2.lowerTemperatureAndCheck());
         System.out.println();
         System.out.println(room2.getTemperatureInfoAfterLoweringTemperature());
 
         System.out.println();
 
         System.out.println(room3.getInfo());
-        System.out.println(room3.loweringTemperatureAndCheck());
+        System.out.println(room3.lowerTemperatureAndCheck());
         System.out.println();
         System.out.println(room3.getTemperatureInfoAfterLoweringTemperature());
 
         System.out.println();
 
         System.out.println(room4.getInfo());
-        System.out.println(room4.loweringTemperatureAndCheck());
+        System.out.println(room4.lowerTemperatureAndCheck());
         System.out.println();
         System.out.println(room4.getTemperatureInfoAfterLoweringTemperature());
 
         System.out.println();
 
         System.out.println(room5.getInfo());
-        System.out.println(room5.loweringTemperatureAndCheck());
+        System.out.println(room5.lowerTemperatureAndCheck());
         System.out.println();
         System.out.println(room5.getTemperatureInfoAfterLoweringTemperature());
     }

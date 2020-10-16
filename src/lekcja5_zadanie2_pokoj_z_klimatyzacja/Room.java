@@ -77,8 +77,8 @@ public class Room {
         this.airConditioningPerformance = airConditioningPerformance;
     }
 
-    private boolean loweringTemperature() {
-        if (isAirConditioning() && temperature > 20) {
+    private boolean lowerTemperature() {
+        if (airConditioning && temperature > 20) {
             temperature = temperature - 1;
             return true;
         } else {
@@ -102,8 +102,8 @@ public class Room {
                 "temperature: " + temperature + "C";
     }
 
-    public String loweringTemperatureAndCheck() {
-        if (loweringTemperature()) {
+    public String lowerTemperatureAndCheck() {
+        if (lowerTemperature()) {
             return "Pomieszczenie: " + getName() + ": obniżam teperature, temperatura po obniżeniu wynosi: "
                     + temperature + "C " + ", wydajnosć klimatyzacji dla tego pomieszczenia to: "
                     + getAirConditioningPerformancePerRoom();
