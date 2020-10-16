@@ -11,10 +11,10 @@ public class Barman {
         } else if (person.getAge() < 18 && !drink.isIncludesAlcohol()) {
             return person.getFirstName() + ", Twój drink bezalkoholowy jest gotowy do odbioru. Kwota do zapłaty "
                     + drink.getPrice() + "zł";
-        } else if (person.getAge() >= 18 && !drink.isIncludesAlcohol()) {
+        } else {
             return person.getFirstName() + ", Twój drink bezalkoholowy jest gotowy do odbioru. Kwota do zapłaty "
                     + drink.getPrice() + "zł";
-        } else return "Przykro mi, jesteś za bardzo pijany, nie sprzedamy ci już alkoholu!";
+        }
     }
 
     public void sellingADrink(String answer) {
