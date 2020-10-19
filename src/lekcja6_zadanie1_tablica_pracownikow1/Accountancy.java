@@ -1,6 +1,6 @@
 package lekcja6_zadanie1_tablica_pracownikow1;
 
-public class Company {
+public class Accountancy {
     public static void main(String[] args) {
 
         Employee employee = new Employee();
@@ -8,6 +8,6 @@ public class Company {
         employees[0] = employee.createEmployee();
         employees[1] = employee.createEmployee();
         double paymentsSum = employees[0].getPayment() + employees[1].getPayment();
-        System.out.println("Firma w sumie musi wydać na wypłatę: " + paymentsSum + "zł");
+        System.out.println("Firma musi wydać na wypłaty dla pracowników: " + paymentsSum + "zł");
     }
 }
