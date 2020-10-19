@@ -8,6 +8,6 @@ public class Company {
         employees[0] = employee.createEmployee();
         employees[1] = employee.createEmployee();
         double paymentsSum = employees[0].getPayment() + employees[1].getPayment();
-        System.out.println("Firam w sumie musi wydać na wypłatę: " + paymentsSum + "zł");
+        System.out.println("Firma w sumie musi wydać na wypłatę: " + paymentsSum + "zł");
     }
 }
