@@ -1,7 +1,7 @@
 package lekcja6_zadanie1_tablica_pracownikow1;
 
 public class Company {
-    private Employee[] employees;
+    private Employee[] employees;// tworzymy kontener dla pracowników
     private int quantity = 0;
 
     public Company(int employeesNumber) {
