@@ -1,13 +1,27 @@
 package lekcja6_zadanie1_tablica_pracownikow1;
 
 public class Company {
-    public static void main(String[] args) {
+    private Employee[] employees;
+    private int quantity = 0;
 
-        Hr hr = new Hr();
-        Employee[] employees = new Employee[2];
-        employees[0] = hr.createEmployee();
-        employees[1] = hr.createEmployee();
-        Accountancy accountancy = new Accountancy();
-        accountancy.paymentsSum(employees);
+    public Company(int employeesNumber) {
+        this.employees = new Employee[employeesNumber];
+    }
+
+    public Employee[] getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Employee[] employees) {
+        this.employees = employees;
+    }
+
+    public void add(Employee emp) {
+        this.employees[quantity] = emp;
+        quantity++;
+    }
+
+    public Employee get(int index) {
+        return employees[index];
     }
 }
