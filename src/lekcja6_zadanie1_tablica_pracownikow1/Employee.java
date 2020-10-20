@@ -1,7 +1,5 @@
 package lekcja6_zadanie1_tablica_pracownikow1;
 
-import java.util.Scanner;
-
 public class Employee {
 
     private String firstName;
@@ -12,9 +10,6 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.payment = payment;
-    }
-
-    public Employee() {
     }
 
     public String getFirstName() {
