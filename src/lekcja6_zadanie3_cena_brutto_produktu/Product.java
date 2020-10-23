@@ -7,6 +7,7 @@ public class Product {
     private double netPrice;
     private String category;
 
+
     public Product(String name, String description, double netPrice, String category) {
         this.name = name;
         this.description = description;
