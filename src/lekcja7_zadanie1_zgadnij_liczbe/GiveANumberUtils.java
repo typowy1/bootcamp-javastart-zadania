@@ -6,7 +6,7 @@ public class GiveANumberUtils {
 
     public void findNumber(int from, int to, int divisibleBy) {
         Scanner scanner = new Scanner(System.in);
-        double numberInput;
+        int numberInput;
 
         do {
             System.out.println("Podaj liczbę");
