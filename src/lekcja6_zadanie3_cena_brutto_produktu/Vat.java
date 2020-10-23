@@ -28,19 +28,18 @@ public class Vat {
         if (vat.vatRates(product[productNumber]) == 0) {
             System.out.println("Błędna kategoria!");
         } else {
-            System.out.println("Cena brutto produktu " + product[productNumber].getName() + " wynosi: "
-                    + vat.vatRates(product[productNumber]) + "zł");
+            System.out.println("Cena brutto produktu " + product[productNumber].getName() + " o kategorii "
+                    + product[productNumber].getCategory() + " wynosi: " + vat.vatRates(product[productNumber]) + "zł");
         }
     }
 
     void calculateTheSumOfPricesFromOneCategory(Product[] product) {
-        Vat vat = new Vat();
         double sum = 0;
-        System.out.println("Podaj kategorię produktu: ");
+        System.out.println("Podaj kategorię produktu z podanych - Napoje, Słodycze, Alkohol: ");
         String productCategory = scanner.nextLine();
         for (Product product1 : product) {
             if (productCategory.equals(product1.getCategory())) {
-                sum += vat.vatRates(product1);
+                sum += vatRates(product1);
             }
         }
         System.out.println("Suma cen brutto dla kategorii " + productCategory + " wynosi: " + sum + "zł");
