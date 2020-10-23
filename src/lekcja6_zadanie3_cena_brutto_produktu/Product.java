@@ -96,16 +96,4 @@ public class Product {
         scanner.nextLine();
         return productsQuantity;
     }
-
-    void calculateTheSumOfPrices() {
-        Vat vat = new Vat();
-        int sum = 0;
-        System.out.println("Podaj kategorię produktu: ");
-        String productCategory = scanner.nextLine();
-        for (Product product1 : product) {
-            if (productCategory.equals(product1.getCategory())) {
-                sum += vat.vatRates(product1);
-            }
-        }
-    }
 }
