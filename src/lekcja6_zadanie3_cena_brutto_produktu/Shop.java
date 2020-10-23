@@ -5,7 +5,6 @@ public class Shop {
     public static void main(String[] args) {
 
         Vat vat = new Vat();
-
         Product product = new Product();
         Product[] products = product.enterProducts();
 

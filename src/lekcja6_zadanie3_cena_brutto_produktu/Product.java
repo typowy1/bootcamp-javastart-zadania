@@ -15,10 +15,6 @@ public class Product {
         return product;
     }
 
-    public Product getProductFromArray(int index) {
-        return product[index];
-    }
-
     public void setProduct(Product[] product) {
         this.product = product;
     }
