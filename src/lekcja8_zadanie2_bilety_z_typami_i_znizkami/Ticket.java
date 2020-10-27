@@ -8,6 +8,8 @@ public class Ticket {
     private String type;
     private int ticketId;
 
+    public Ticket() {
+    }
 
     public Ticket(String eventName, String placeOfEvent, double basicPrice, double discount, String type, int ticketId) {
         this.eventName = eventName;
@@ -71,10 +73,11 @@ public class Ticket {
                 discount + ", id biletu: " + ticketId + ", rodzaj biletu: " + type;
     }
 
-    public double getDiscountPrice() {
-        double result = basicPrice * discount;
-        return basicPrice - result;
+    public double getDiscountPriceFromOnlinePrice() {
+        double result = getOnlinePrice() * discount;
+        return getOnlinePrice() - result;
     }
+
 
     public double getOnlinePrice() {
         return basicPrice;
@@ -85,9 +88,19 @@ public class Ticket {
         return basicPrice;
     }
 
+    public double getDiscountPriceFromStandardPrice() {
+        double result = getStandardPrice() * discount;
+        return getStandardPrice() - result;
+    }
+
     public double getGiftPrice() {
         double result = basicPrice * 0.05;
         return getStandardPrice() + result;
+    }
+
+    public double getDiscountPriceFromGiftPrice() {
+        double result = getGiftPrice() * discount;
+        return getGiftPrice() - result;
     }
 
 }

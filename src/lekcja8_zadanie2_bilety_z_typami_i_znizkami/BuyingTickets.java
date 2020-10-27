@@ -5,7 +5,6 @@ public class BuyingTickets {
 
 
         Ticket[] tickets = TicketUtils.enterTickets();
-        TicketUtils.getFinalPrice(tickets);
         TicketUtils.showInfo(tickets);
     }
 }

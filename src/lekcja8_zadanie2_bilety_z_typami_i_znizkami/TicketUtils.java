@@ -43,28 +43,25 @@ public class TicketUtils {
         return productsQuantity;
     }
 
-    public static Double getFinalPrice(Ticket[] tickets) {
+    private static Double getFinalPrice(Ticket ticket) {
 
-        for (int i = 0; i < tickets.length; i++) {
-            if (tickets[i].getType().equals("bilet internetowy")) {
-                if (tickets[i].getDiscount() != 0) {
-                    return tickets[i].getDiscountPrice();
-                } else {
-                    return tickets[i].getOnlinePrice();
-                }
-            } else if (tickets[i].getType().equals("bilet standardowy")) {
-                if (tickets[i].getDiscount() != 0) {
-                    return tickets[i].getDiscountPrice();
-                } else {
-                    return tickets[i].getStandardPrice();
-                }
-            } else {
-                if (tickets[i].getDiscount() != 0) {
-                    return tickets[i].getDiscountPrice();
-                } else {
-                    return tickets[i].getGiftPrice();
-                }
-            }
+        if (ticket.getType().equals("bilet internetowy") && ticket.getDiscount() != 0) {
+            return ticket.getDiscountPriceFromOnlinePrice();
+
+        } else if (ticket.getType().equals("bilet internetowy") && ticket.getDiscount() == 0) {
+            return ticket.getOnlinePrice();
+
+        } else if (ticket.getType().equals("bilet standardowy") && ticket.getDiscount() != 0) {
+            return ticket.getDiscountPriceFromStandardPrice();
+
+        } else if (ticket.getType().equals("bilet standardowy") && ticket.getDiscount() == 0) {
+            return ticket.getStandardPrice();
+
+        } else if (ticket.getType().equals("bilet prezentowy") && ticket.getDiscount() != 0) {
+            return ticket.getDiscountPriceFromGiftPrice();
+
+        } else if (ticket.getType().equals("bilet prezentowy") && ticket.getDiscount() == 0) {
+            return ticket.getGiftPrice();
         }
         return null;
     }
@@ -73,16 +70,9 @@ public class TicketUtils {
         for (int i = 0; i < tickets.length; i++) {
             System.out.println("Informacje o bilecie");
             System.out.println(tickets[i].getInfo());
-            if (tickets[i].getType().equals("bilet internetowy")) {
-                System.out.println("Cena przy zakupie jako " + tickets[i].getType()
-                        + ", cena: " + tickets[i].getOnlinePrice());
-            } else if (tickets[i].getType().equals("bilet standardowy")) {
-                System.out.println("Cena przy zakupie jako " + tickets[i].getType()
-                        + ", cena: " + tickets[i].getStandardPrice());
-            } else {
-                System.out.println("Cena przy zakupie jako " + tickets[i].getType()
-                        + ", cena: " + tickets[i].getGiftPrice());
-            }
+            System.out.println("Cena przy zakupie jako: " + tickets[i].getType()
+                    + ", cena: " + getFinalPrice(tickets[i]));
         }
     }
 }
+
