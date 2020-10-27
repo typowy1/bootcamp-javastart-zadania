@@ -6,7 +6,7 @@ public class School {
         Student[] students = SchoolUtils.enterStudents();
         Teacher[] teachers = SchoolUtils.enterTeachers();
 
-        Group group1 = new Group("It", teachers, students);
-        SchoolUtils.showGroupInfo(group1);
+        Group groupIT = new Group("IT", teachers, students);
+        SchoolUtils.showGroupInfo(groupIT);
     }
 }
