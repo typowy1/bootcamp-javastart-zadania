@@ -8,9 +8,6 @@ public class Ticket {
     private String type;
     private int ticketId;
 
-    public Ticket() {
-    }
-
     public Ticket(String eventName, String placeOfEvent, double basicPrice, double discount, String type, int ticketId) {
         this.eventName = eventName;
         this.placeOfEvent = placeOfEvent;
