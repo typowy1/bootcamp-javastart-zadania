@@ -68,7 +68,7 @@ public class Ticket {
 
     public String getInfo() {
         return "Ewent: " + eventName + ", miejsce: " + placeOfEvent + ", cena podstawowa: " + basicPrice + ", zniżka: " +
-                discount + ", id biletu: " + ticketId + ", rodzaj biletu" + type;
+                discount + ", id biletu: " + ticketId + ", rodzaj biletu: " + type;
     }
 
     public double getDiscountPrice() {

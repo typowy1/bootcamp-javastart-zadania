@@ -1,6 +1,6 @@
 package lekcja8_zadanie2_bilety_z_typami_i_znizkami;
 
-public class buyingTickets {
+public class BuyingTickets {
     public static void main(String[] args) {
 
 
