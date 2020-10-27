@@ -6,8 +6,4 @@ public class Student extends Person {
         super(firstName, lastName);
     }
 
-    @Override
-    public String getInfo() {
-        return super.getInfo();
-    }
 }
