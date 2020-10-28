@@ -7,41 +7,27 @@ public class SchoolUtils {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static Student[] enterStudents() {
+    public static Student enterStudents(Grade[] grades) {
 
-        System.out.println("Wprowadanie studentów:");
+        System.out.println("Wprowadzanie studenta:");
 
-        int quantity = enterNumberOfPeople();
-        Student[] students = new Student[quantity];
+        String firstName = enterFirstName();
+        String lastName = enterLastName();
 
-        for (int i = 0; i < students.length; i++) {
-            System.out.println("Podaj dane studenta " + (i + 1));
-
-            String firstName = enterFirstName();
-            String lastName = enterLastName();
-
-            students[i] = new Student(firstName, lastName);
-        }
-        return students;
+        Student student = new Student(firstName, lastName, grades);
+        return student;
     }
 
-    public static Teacher[] enterTeachers() {
+    public static Teacher enterTeachers() {
 
-        System.out.println("Wprowadanie nauczycieli:");
+        System.out.println("Wprowadzanie nauczyciela:");
 
-        int quantity = enterNumberOfPeople();
-        Teacher[] teachers = new Teacher[quantity];
+        String firstName = enterFirstName();
+        String lastName = enterLastName();
+        String subject = enterSubject();
 
-        for (int i = 0; i < teachers.length; i++) {
-            System.out.println("Podaj dane nauczyciela " + (i + 1));
-
-            String firstName = enterFirstName();
-            String lastName = enterLastName();
-            String subject = enterSubject();
-
-            teachers[i] = new Teacher(firstName, lastName, subject);
-        }
-        return teachers;
+        Teacher teacher = new Teacher(firstName, lastName, subject);
+        return teacher;
     }
 
     private static String enterFirstName() {
@@ -62,32 +48,25 @@ public class SchoolUtils {
         return lastName;
     }
 
-
-    private static int enterNumberOfPeople() {
-        System.out.println("Podaj ilość osób do wprowadzenia:");
-        int quantity = scanner.nextInt();
-        scanner.nextLine();
-        return quantity;
-    }
-
-    private static void showTeachersInfo(Teacher[] teachers) {
-        for (Teacher teacher : teachers) {
-            System.out.println(teacher.getInfo());
-        }
-    }
-
-    private static void showStudentsInfo(Student[] students) {
-        for (Student student : students) {
-            System.out.println(student.getInfo());
-        }
-    }
-
     public static void showGroupInfo(Group group) {
+        System.out.println();
         System.out.println("Nazwa grupy: " + group.getName());
-        System.out.println("Nauczyciel:");
-        showTeachersInfo(group.getTeachers());
-        System.out.println("Uczniowie:");
-        showStudentsInfo(group.getStudents());
+        System.out.println("Nauczyciel: " + group.getTeachers().getInfo());
+        System.out.println("Studenci:");
+        for (Student student : group.getStudents()) {
+            if (student != null) {
+                System.out.println(student.getInfo());
+            }
+        }
+    }
 
+    public static void showStudentInfo(Student student) {
+        System.out.println("Student: " + student.getFirstName() + ", " + student.getLastName()
+                + ", historia ocen z przedmiowtów: ");
+        for (Grade grade : student.getGrades()) {
+            if (grade != null) {
+                System.out.println(grade.getValue() + ", " + grade.getGroup().getName());
+            }
+        }
     }
 }
