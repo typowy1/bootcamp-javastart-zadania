@@ -13,13 +13,14 @@ public class School {
         Group programowanie = new Group("Programowanie", iTTeachers[0], students);
         Group informatyka = new Group("Informatyka", iTTeachers[0], students);
 
-        grades[0] = new Grade(5, programowanie);
-        grades[1] = new Grade(4, informatyka);
+        Grade grade = new Grade(5, programowanie);
+        students[0].addGrade(grade);
+        Grade grade1 = new Grade(3, informatyka);
+        students[0].addGrade(grade1);
 
         SchoolUtils.showGroupInfo(programowanie);
 
         System.out.println();
         SchoolUtils.showStudentGradingHistoryInfo(students[0]);
-
     }
 }
