@@ -19,7 +19,7 @@ public class School {
         SchoolUtils.showGroupInfo(programowanie);
 
         System.out.println();
-        SchoolUtils.showStudentInfo(students[0]);
+        SchoolUtils.showStudentGradingHistoryInfo(students[0]);
 
     }
 }
