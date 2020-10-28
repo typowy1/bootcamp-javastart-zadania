@@ -3,7 +3,6 @@ package lekcja8_zadanie1_firma_szkoleniowa;
 public class School {
     public static void main(String[] args) {
 
-
         Grade[] grades = new Grade[10];
         Student[] students = new Student[30];
         students[0] = SchoolUtils.enterStudents(grades);

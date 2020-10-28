@@ -2,6 +2,7 @@ package lekcja8_zadanie1_firma_szkoleniowa;
 
 public class Student extends Person {
 
+
     private Grade[] grades;
 
     public Student(String firstName, String lastName, Grade[] grades) {

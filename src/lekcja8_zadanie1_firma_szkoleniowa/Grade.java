@@ -2,6 +2,7 @@ package lekcja8_zadanie1_firma_szkoleniowa;
 
 public class Grade {
 
+
     private int value;
     private Group group;
 

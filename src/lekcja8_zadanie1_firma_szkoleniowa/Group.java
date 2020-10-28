@@ -2,6 +2,7 @@ package lekcja8_zadanie1_firma_szkoleniowa;
 
 public class Group {
 
+
     private String name;
     private Teacher teachers;
     private Student[] students;
