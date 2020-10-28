@@ -8,7 +8,7 @@ public class SchoolUtils {
     static Scanner scanner = new Scanner(System.in);
 
 
-    public static Student enterStudents() {
+    public static Student enterStudents(Grade[] grades) {
 
         System.out.println("Wprowadzanie studenta:");
 
@@ -21,7 +21,7 @@ public class SchoolUtils {
         String firstName = enterFirstName();
         String lastName = enterLastName();
 
-        Student student = new Student(firstName, lastName);
+        Student student = new Student(firstName, lastName, grades);
 //        }
         return student;
     }

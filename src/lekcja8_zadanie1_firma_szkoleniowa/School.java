@@ -4,8 +4,9 @@ public class School {
     public static void main(String[] args) {
 
 
+        Grade[] grades = new Grade[10];
         Student[] students = new Student[30];
-        students[0] = SchoolUtils.enterStudents();
+        students[0] = SchoolUtils.enterStudents(grades);
  //       students[1] = SchoolUtils.enterStudents();
 
         Teacher[] iTTeachers = new Teacher[100];
@@ -16,8 +17,8 @@ public class School {
          Group programowanie = new Group("Programowanie", iTTeachers[0], students);
  //       Group informatyka = new Group("Informatyka", iTTeachers[1], students);
 
-//        Grade[] grades = new Grade[2];
-//        grades[0] = new Grade(5, iT[0]);
+//       Grade[] grades = new Grade[2];
+        grades[0] = new Grade(5, programowanie);
 //        grades[1] = new Grade(4, iT[1]);
 //      SchoolUtils.showGroupInfo(iT[0]);
       SchoolUtils.showGroupInfo(programowanie);

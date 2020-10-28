@@ -6,11 +6,11 @@ public class Student extends Person {
 
     private Grade[] grades;
 
-//    public Student(String firstName, String lastName, Grade[] grades) {
-//        super(firstName, lastName);
-//        this.grades = grades;
-//    }
-//
+    public Student(String firstName, String lastName, Grade[] grades) {
+        super(firstName, lastName);
+        this.grades = grades;
+    }
+
 //    public Student(String firstName, String lastName, int gradeNumber) {
 //        super(firstName, lastName);
 //        this.grades = new Grade[gradeNumber];
@@ -31,5 +31,9 @@ public class Student extends Person {
 
     public Grade[] getGrades() {
         return grades;
+    }
+
+    public void setGrades(Grade[] grades) {
+        this.grades = grades;
     }
 }
