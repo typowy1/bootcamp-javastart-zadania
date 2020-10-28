@@ -7,14 +7,15 @@ public class SchoolUtils {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static Student enterStudents(Grade[] grades) {
+    public static Student enterStudents() {
 
         System.out.println("Wprowadzanie studenta:");
 
         String firstName = enterFirstName();
         String lastName = enterLastName();
 
-        Student student = new Student(firstName, lastName, grades);
+        Student student1 = new Student();
+        Student student = new Student(firstName, lastName, student1.getGrades());
         return student;
     }
 
