@@ -6,9 +6,14 @@ public class Student extends Person {
     private Grade[] grades = new Grade[MAX_GRADE_SIZE];
     private int currentGradeAmount = 0;
 
-    public Student(String firstName, String lastName, Grade[] grades) {
+    public Student(String firstName, String lastName, Grade[] initialGrades) {
         super(firstName, lastName);
-        this.grades = grades;
+        for(int i =0; i < initialGrades.length; i++){
+            if(initialGrades[i] == null){
+                continue;
+            }
+            addGrade(initialGrades[i]);
+        }
     }
 
     @Override
