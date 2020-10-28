@@ -4,20 +4,10 @@ public class Grade {
 
     private int value;
     private Group group;
-    private Student student;
 
-    public Grade(int value, Group group, Student student) {
+    public Grade(int value, Group group) {
         this.value = value;
         this.group = group;
-        this.student = student;
-    }
-
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
     }
 
     public int getValue() {
@@ -34,5 +24,9 @@ public class Grade {
 
     public void setGroup(Group group) {
         this.group = group;
+    }
+
+    public String getInfo() {
+        return value + group.getName();
     }
 }

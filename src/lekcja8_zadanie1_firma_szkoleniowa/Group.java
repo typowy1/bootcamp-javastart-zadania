@@ -3,10 +3,10 @@ package lekcja8_zadanie1_firma_szkoleniowa;
 public class Group {
 
     private String name;
-    private Teacher[] teachers;
+    private Teacher teachers;
     private Student[] students;
 
-    public Group(String name, Teacher[] teacher, Student[] students) {
+    public Group(String name, Teacher teacher, Student[] students) {
         this.name = name;
         this.teachers = teacher;
         this.students = students;
@@ -21,6 +21,10 @@ public class Group {
     }
 
 
+    public Student getStudentsByIndex(int index) {
+        return students[index];
+    }
+
     public Student[] getStudents() {
         return students;
     }
@@ -29,11 +33,11 @@ public class Group {
         this.students = students;
     }
 
-    public Teacher[] getTeachers() {
+    public Teacher getTeachers() {
         return teachers;
     }
 
-    public void setTeachers(Teacher[] teachers) {
+    public void setTeachers(Teacher teachers) {
         this.teachers = teachers;
     }
 }
