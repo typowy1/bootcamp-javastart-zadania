@@ -61,11 +61,11 @@ public class SchoolUtils {
     }
 
     public static void showStudentGradingHistoryInfo(Student student) {
-        System.out.println("Student: " + student.getFirstName() + ", " + student.getLastName()
+        System.out.println("Student: " + student.getFirstName() + " " + student.getLastName()
                 + ", historia ocen z przedmiowtów: ");
         for (Grade grade : student.getGrades()) {
             if (grade != null) {
-                System.out.println(grade.getValue() + " " + grade.getGroup().getName());
+                System.out.println(grade.getValue() + ", " + grade.getGroup().getName());
             }
         }
     }

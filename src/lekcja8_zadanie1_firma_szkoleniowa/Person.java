@@ -27,6 +27,6 @@ public class Person {
     }
 
     public String getInfo() {
-        return firstName + ", " + lastName;
+        return firstName + " " + lastName;
     }
 }
