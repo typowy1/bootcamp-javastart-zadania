@@ -20,11 +20,6 @@ public class Group {
         this.name = name;
     }
 
-
-    public Student getStudentsByIndex(int index) {
-        return students[index];
-    }
-
     public Student[] getStudents() {
         return students;
     }

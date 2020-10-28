@@ -27,6 +27,6 @@ public class Grade {
     }
 
     public String getInfo() {
-        return value + group.getName();
+        return "Ocena: " + value + " , nazwa grupy: " + group.getName();
     }
 }
