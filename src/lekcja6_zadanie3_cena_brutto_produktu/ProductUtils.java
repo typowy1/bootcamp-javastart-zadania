@@ -37,4 +37,5 @@ public class ProductUtils {
         scanner.nextLine();
         return productsQuantity;
     }
+
 }
