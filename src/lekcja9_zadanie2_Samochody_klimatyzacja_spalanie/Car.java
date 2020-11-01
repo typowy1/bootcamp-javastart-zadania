@@ -2,6 +2,7 @@ package lekcja9_zadanie2_Samochody_klimatyzacja_spalanie;
 
 public class Car extends Vehicle {
 
+    private static double AIR_CONDITION_CONSUMPTION = 0.8;
     private boolean airConditioningOn;
 
     public Car(String brand, String model, double tankCapacity, double averageFuelConsumptionPerHundredKm, boolean airConditioningOn) {
@@ -20,8 +21,7 @@ public class Car extends Vehicle {
     @Override
     public double getActualFuelConsumption() {
         if (airConditioningOn) {
-            double reslut = getAverageFuelConsumptionPerHundredKm() + 0.8;
-            return reslut;
+            return getAverageFuelConsumptionPerHundredKm() + AIR_CONDITION_CONSUMPTION;
         } else {
             return getAverageFuelConsumptionPerHundredKm();
         }
