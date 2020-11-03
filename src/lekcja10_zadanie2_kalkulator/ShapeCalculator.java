@@ -3,12 +3,6 @@ package lekcja10_zadanie2_kalkulator;
 public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
 
     @Override
-    public double lineLength(Line2D line) {
-
-        return super.lineLength(line);
-    }
-
-    @Override
     public double circleArea(Circle circle) {
         return Math.PI * Math.pow(circle.getR(), 2);
     }

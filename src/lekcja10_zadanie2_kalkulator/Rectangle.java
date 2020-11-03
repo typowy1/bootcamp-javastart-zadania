@@ -2,8 +2,8 @@ package lekcja10_zadanie2_kalkulator;
 
 public class Rectangle extends GeometricShape {
 
-    double a;
-    double b;
+    private double a;
+    private double b;
 
     public Rectangle(double a, double b) {
         this.a = a;
