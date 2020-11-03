@@ -12,13 +12,13 @@ public class ProductUtils {
         Product[] product = new Product[productsQuantity];
 
         for (int i = 0; i < product.length; i++) {
-            System.out.println("Podaj nazwę produktu: " + (i + 1));
+            System.out.println("Podaj nazwę produktu " + (i + 1));
             String productName = scanner.nextLine();
 
-            System.out.println("Podaj opis produktu: " + (i + 1));
+            System.out.println("Podaj opis produktu " + (i + 1));
             String productDescription = scanner.nextLine();
 
-            System.out.println("Podaj cenę produktu: " + (i + 1));
+            System.out.println("Podaj cenę produktu " + (i + 1));
             int productPrice = scanner.nextInt();
             scanner.nextLine();
 
