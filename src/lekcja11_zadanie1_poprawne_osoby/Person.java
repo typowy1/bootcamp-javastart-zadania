@@ -6,6 +6,7 @@ public class Person {
     private int age;
     private String pesel;
 
+
     public Person(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException {
         checkWord(firstName, "imię");
         checkWord(firstName, "nazwisko");
@@ -20,10 +21,9 @@ public class Person {
         return firstName;
     }
 
+
     public void setFirstName(String firstName) throws NameUndefinedException {
         checkWord(firstName, "imię");
-        this.firstName = firstName;
-    }
 
     public String getLastName() {
         return lastName;
