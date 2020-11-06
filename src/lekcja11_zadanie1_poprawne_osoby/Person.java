@@ -7,8 +7,8 @@ public class Person {
     private String pesel;
 
     public Person(String firstName, String lastName, int age, String pesel) {
-        checkFirstName(firstName);
-        checkLastName(lastName);
+        checkWord(lastName, "imie");
+        checkWord(lastName, "nazwisko");
         checkAge(age);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -21,7 +21,7 @@ public class Person {
     }
 
     public void setFirstName(String firstName) {
-        checkFirstName(firstName);
+        checkWord(lastName, "imie");
         this.firstName = firstName;
     }
 
@@ -30,7 +30,7 @@ public class Person {
     }
 
     public void setLastName(String lastName) {
-        checkLastName(lastName);
+        checkWord(lastName, "nazwisko");
         this.lastName = lastName;
     }
 
@@ -63,14 +63,6 @@ public class Person {
             throw new NameUndefinedException("Błędna wartość!, " + firstOrLastNameWord + ": " + word +
                     " - nie może zawierać mniej niż 2 znaki.");
         }
-    }
-
-    private void checkFirstName(String firstName) {
-        checkWord(firstName, "imię");
-    }
-
-    private void checkLastName(String lastName) {
-        checkWord(lastName, "nazwisko");
     }
 
     private void checkAge(int age) {
