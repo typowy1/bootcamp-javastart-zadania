@@ -3,14 +3,34 @@ package lekcja11_zadanie1_poprawne_osoby;
 public class PersonTest {
     public static void main(String[] args) {
 
-        Person person = new Person("Ra", "Ka", 2, "5568545467");
+        Person person = null;
+        try {
+            person = new Person("kk", "kk", 2, "5568545467");
+        } catch (NameUndefinedException | IncorrectAgeException e) {
+            System.err.println(e.getMessage());
+            System.out.println("Koniec programu");
+        }
         System.out.println(person);
-        person.setAge(3);
+
+        try {
+            person.setAge(5);
+        } catch (IncorrectAgeException e) {
+            System.err.println(e.getMessage());
+        }
         System.out.println(person);
-        person.setFirstName("pf");
+
+        try {
+            person.setFirstName("pr");
+        } catch (NameUndefinedException e) {
+            System.err.println(e.getMessage());
+        }
         System.out.println(person);
-        person.setLastName("ta");
+
+        try {
+            person.setLastName("tt");
+        } catch (NameUndefinedException e) {
+            System.err.println(e.getMessage());
+        }
         System.out.println(person);
     }
-
 }
