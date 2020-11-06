@@ -6,7 +6,7 @@ public class Person {
     private int age;
     private String pesel;
 
-    public Person(String firstName, String lastName, int age, String pesel) {
+    public Person(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException {
         checkFirstName(firstName);
         checkLastName(lastName);
         checkAge(age);
@@ -20,7 +20,7 @@ public class Person {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) throws NameUndefinedException {
         checkFirstName(firstName);
         this.firstName = firstName;
     }
@@ -29,7 +29,7 @@ public class Person {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName) throws NameUndefinedException {
         checkLastName(lastName);
         this.lastName = lastName;
     }
@@ -38,7 +38,7 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws IncorrectAgeException {
         checkAge(age);
         this.age = age;
     }
@@ -56,7 +56,7 @@ public class Person {
         return "firstName='" + firstName + ", lastName='" + lastName + ", age=" + age + ", pesel='" + pesel;
     }
 
-    private void checkWord(String word, String firstOrLastNameWord) {
+    private void checkWord(String word, String firstOrLastNameWord) throws NameUndefinedException {
         if (word == null) {
             throw new NameUndefinedException("Błędna wartość!, " + firstOrLastNameWord + " - nie moze być wartością null.");
         } else if (word.length() < 2) {
@@ -65,15 +65,15 @@ public class Person {
         }
     }
 
-    private void checkFirstName(String firstName) {
+    private void checkFirstName(String firstName) throws NameUndefinedException {
         checkWord(firstName, "imię");
     }
 
-    private void checkLastName(String lastName) {
+    private void checkLastName(String lastName) throws NameUndefinedException {
         checkWord(lastName, "nazwisko");
     }
 
-    private void checkAge(int age) {
+    private void checkAge(int age) throws IncorrectAgeException {
         if (age < 1) {
             throw new IncorrectAgeException("Błędna wartość! " + age + " - wiek nie może być mniejszy niż 1.");
         }
