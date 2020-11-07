@@ -4,6 +4,9 @@ public class Processor extends Indicators implements Overclockable {
 
     private static final int MAX_TEMPERATURE = 120;
     private static final int MAX_FREQUENCY = 4000;
+    private static final int ADDED_TEMPERATURE = 10;
+    private static final int ADDED_FREQUENCY = 100;
+
     private int cores;
 
     public Processor(String name, String manufacturer, String serialNumber, int frequency, double temperature, int cores) {
@@ -48,9 +51,9 @@ public class Processor extends Indicators implements Overclockable {
 
     @Override
     public void overclock() {
-        setTemperature(getTemperature() + 10);
-        checkTemperature(getTemperature());
-        setFrequency(getFrequency() + 100);
+        checkTemperature(getTemperature() + ADDED_TEMPERATURE);
+        setTemperature(getTemperature() + ADDED_TEMPERATURE);
+        setFrequency(getFrequency() + ADDED_FREQUENCY);
         checkFrequency(getFrequency());
     }
 }
