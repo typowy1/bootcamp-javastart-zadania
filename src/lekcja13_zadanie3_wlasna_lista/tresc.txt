@@ -1,0 +1,19 @@
+Treść zadania
+
+Napisz własną implementację listy. Powinna być generyczna i obsługiwać dowolny typ obiektowy. Nie ma znaczenia czy wybierzesz implementację opartą na tablicy czy liście wiązanych elementów.
+
+Powinna posiadać następujące funkcjonalności:
+
+    Pobieranie elementu po indeksie
+    Dodawanie elementu (na koniec listy)
+    Zwracanie informacji o rozmiarze listy
+    Usuwanie elementu po indeksie
+    Wstawianie elementu w wybrane miejsce (i przesuwanie pozostałych elementów "dalej")
+
+
+
+Punktacja:
+
+    podpunkty 1, 2, 3 - 1 pkt
+    usuwanie - 1 punkt
+    wstawianie elementu w wybrane miejsce
