@@ -1,0 +1,24 @@
+    - Klasa to szablon definiujący postać obiektu, służy do opisywania np otaczających nas przedmiotów, zadań itd.,
+    zawiera pola i metody.
+
+    - Obiekt to reprezentacja klasy, przechowuje informacje o zmiennych, pozwala się do nich odwołać,
+    za jego pomocą możemy wywołać metody.
+
+    - Zmienna to element, który pozwala przechowywać wartości, a następnie odwołać się do nich po nazwach,
+    każda zmienna musi mieć określony typ, np. int, albo String.
+
+    - Jeżeli deklarację zmiennej poprzedzimy słowem final, to będzie to zmienna finalna, zadeklarowana w ten sposób
+    zmienna może być tylko raz, próba przypisania do niej wartości po raz drugi da błąd.
+
+    - W klasie mogą się znajdować zmienne, metody i konstruktory
+
+    - Zmienne typu obiektowego są wywoływane przez operator new i służą do tworzenia nowych obiektów.
+
+    - Jeśli w klasie zdefiniowano chociaż jeden konstruktor to kompilator nie wygeneruje dla nas konstruktora domyślnego.
+
+    - Zakładając, że istnieje klasa Car, to przy zapisie:
+
+    Car car1 = new Car(„BMW”, „M5”, 2007, 2.6);
+    Car car2 = car1;​
+
+    car1 i car2 to dwie referencje wskazujące na ten sam obiekt
