@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class EmployeeUtils {
 
-    public static void save(Employee[] employees, String statsFileName) {
+    public static void save1(Employee[] employees, String statsFileName) {
 
         File stats = new File(statsFileName);
         boolean fileExists = stats.exists();
@@ -42,7 +42,7 @@ public class EmployeeUtils {
         }
     }
 
-    public static Employee[] read(File fileName) throws FileNotFoundException {
+    public static Employee[] read1(File fileName) throws FileNotFoundException {
         Scanner scanner = new Scanner(fileName);
         int lines = countLines(fileName);
         Employee[] result = new Employee[lines];
@@ -104,9 +104,9 @@ public class EmployeeUtils {
     }
 
     public static void printStatisticsInfo(Employee[] employees) {
-        double averagePayout = EmployeeUtils.averagePayout(employees);
-        double lowestPayout = EmployeeUtils.lowestPayout(employees);
-        double highestPayout = EmployeeUtils.highestPayout(employees);
+        double averagePayout = averagePayout(employees);
+        double lowestPayout = lowestPayout(employees);
+        double highestPayout = highestPayout(employees);
         int itDepartment = countDepartments(employees, "IT");
         int supportDepartment = countDepartments(employees, "Support");
         int managementDepartment = countDepartments(employees, "Management");
