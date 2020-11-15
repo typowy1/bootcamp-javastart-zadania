@@ -40,18 +40,19 @@ public class Main {
         int sum = 0;
         for (int i = 0; i < numbers.size(); i++) {
             sum += numbers.get(i); //  do sumy dodajemy kolejne liczby z listy
-            if (i < numbers.size() - 1) {// mając liczby 1, 2, 3 czyli tu dochodzimy do 2 i dodajemy +
+            if (i < numbers.size() - 1) {// mając liczby 1, 2, 3 czyli tu dochodzimy do 2 i dodajemy +, i < 3 - 1(czyli 2) czyli liczymy od 1 do 0 dlatego
+                // ze znak < , wyklucza 2, czyli bierzemy tylko dwa indexy pod uwagę [0]  i [1]
                 // jezeli indeks jest mniejszy od ostatniego poprawnego indeksu listy to wyświetlam kolejną liczbę i doklejam znak plusa 1 + 2 +
                 System.out.print(numbers.get(i) + " + ");
             } else {// natomiast to z listy liczb 1,2,3 dojdziemy do odtatniej liczby czyli 3 i wstawimy równa sie wyjdzie nam 1 + 2 + 3 =
                 System.out.print(numbers.get(i) + " = ");
             }
         }
-        System.out.println(sum); //a tu wyjdzie na 1 + 2 +3 =
+        System.out.println(sum); //a tu wyjdzie na 1 + 2 +3 = sum
 
-//        tutaj mamy warunek i < numbers.size() - 1 który jest prawdziwy dla wszystkich elementów listy oprócz ostatniego.
+//         printListSum tutaj mamy warunek i < numbers.size() - 1 który jest prawdziwy dla wszystkich elementów listy oprócz ostatniego.
 //                Więc ta linijka  System.out.print(numbers.get(i) + " + ");  wykona sie dla wszystkich elementów oprócz ostatniego.
-//                Za to ra linijka System.out.print(numbers.get(i) + " = "); wykona się tylko dla ostatniego elementu.
+//                Za to ta linijka System.out.print(numbers.get(i) + " = "); wykona się tylko dla ostatniego elementu.
     }
 
     //wyświetl je w kolejności odwrotnej niż były wprowadzone,
@@ -68,8 +69,7 @@ public class Main {
         }
         System.out.println();// zeby wynik był w kolejnym wierszu
     }
-
-//    zaczyna się od ostatniego elementu i "przechodzi" przez elementy do pierwszego elementu listy
+//    printReverseList zaczyna się od ostatniego elementu i "przechodzi" przez elementy do pierwszego elementu listy
 //    jesli chodzi o przecinek na koncu to musisz dodać podobny warunek jak przy printListSum do petli:
 
     //wczytasz od użytkownika dowolną ilość liczb dodatnich.
