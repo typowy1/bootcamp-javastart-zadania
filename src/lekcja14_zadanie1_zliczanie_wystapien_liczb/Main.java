@@ -23,7 +23,7 @@ public class Main {
         for (Integer number : selectedNumbers) {
             System.out.println(number + " - liczba wystąpień " + Collections.frequency(numbers, number));
             Collections.sort(numbers);
-//            You could convert the actual list to a unique item set and after that, you could use the method Collections.
+//            You could convert the actual list to a unique item list(tutaj set) and after that, you could use the method Collections.
 //                    frequency to know how many time the same element appears in the list.
             //https://www.geeksforgeeks.org/java-util-collections-frequency-java/
         }
