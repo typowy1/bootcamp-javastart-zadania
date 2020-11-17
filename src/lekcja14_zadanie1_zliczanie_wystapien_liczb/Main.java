@@ -26,6 +26,7 @@ public class Main {
 //            You could convert the actual list to a unique item list(tutaj set) and after that, you could use the method Collections.
 //                    frequency to know how many time the same element appears in the list.
             //https://www.geeksforgeeks.org/java-util-collections-frequency-java/
+            //https://www.codota.com/code/java/methods/java.util.Collections/frequency
         }
     }
 
