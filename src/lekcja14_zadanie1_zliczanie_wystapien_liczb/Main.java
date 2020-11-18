@@ -18,10 +18,13 @@ public class Main {
     }
 
     private static void printNumbersStatsFromFile(String fileName) throws FileNotFoundException {
-        List<Integer> numbers = readFile(fileName);
+        List<Integer> numbers = readFile(fileName);// ja tu wstawiłem liste, rozwiązenie w metodzie main
         Set<Integer> selectedNumbers = new TreeSet<>(numbers);
         for (Integer number : selectedNumbers) {
-            System.out.println(number + " - liczba wystąpień " + Collections.frequency(numbers, number));
+            //wersja 1
+//            System.out.println(number + " - liczba wystąpień " + countOccurences(number, mumbers));bieże dany numer i sprawdza ilość wystapień w kolekcji (numer, kolekcja)
+            //wersja 2
+            System.out.println(number + " - liczba wystąpień " + Collections.frequency(numbers, number));// z kolekcji zlicza ilość wystąpień obiektu, (kolekcja, numer)
             Collections.sort(numbers);
 //            You could convert the actual list to a unique item list(tutaj set) and after that, you could use the method Collections.
 //                    frequency to know how many time the same element appears in the list.
@@ -40,4 +43,13 @@ public class Main {
         scanner.close();
         return numbers;
     }
+
+//        private static int countOccurences(int number, List<Integer> numbers) { bieże dany numer i sprawdza ilość wystapień w kolekcji
+//        int occurences = 0;
+//        for (Integer n : allNumbers) {
+//            if (number == n)
+//                occurences++;
+//        }
+//        return occurences;
+//    }
 }
