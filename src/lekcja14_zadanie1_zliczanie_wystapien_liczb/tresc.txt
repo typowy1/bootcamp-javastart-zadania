@@ -1,0 +1,19 @@
+Treść zadania
+
+Stwórz ręcznie plik o nazwie liczby.txt, w którym zapiszesz co najmniej kilkanaście liczb, wśród których część powinna się powtarzać. Plik powinien mieć taki format, aby było Ci go wygodnie odczytać w programie.
+
+Następnie napisz program, w którym zliczysz liczbę wystąpień poszczególnych liczb i wyświetl je na ekranie. Wydruk na ekranie powinien być posortowany zgodnie z naturalną kolejnością liczb.  Przykładowo dla pliku, w którym byłyby liczby:
+
+9
+2
+5
+2
+9
+6
+
+na ekranie powinniśmy zobaczyć:
+
+2 - liczba wystąpień 2
+5 - liczba wystąpień 1
+6 - liczba wystąpień 1
+9 - liczba wystąpień 2

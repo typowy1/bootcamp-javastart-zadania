@@ -1,0 +1,35 @@
+Treść zadania
+
+Napisz program, który będzie pozwalał zarządzać wynikami pewnych zawodów (sportowe, e-sportowe, lub podobne).
+
+Swoje rozwiązanie dodaj do metody run w klasie TournamentStats.
+
+Program powinien wczytać od użytkownika informacje o wynikach kilku zawodników – tak długo aż użytkownik nie wpisze w konsoli wyrazu STOP.
+
+Po wpisaniu wyrazu STOP program powinien zapytać użytkownika po jakim parametrze posortować i czy zrobić to rosnąco, czy malejąco. Zapisz do pliku stats.csv posortowane dane w formacie CSV.
+
+W zadaniu masz dowolność pod względem tworzenia klas i używanych kolekcji, dobierz je według swojego uznania. Program powinien być napisany w sposób obiektowy, tzn. cały kod programu nie może znajdować się tylko w metodzie main.
+
+Przykładowy przebieg programu:
+
+Podaj wynik kolejnego gracza (lub stop):
+Jan Kowalski 425
+
+Podaj wynik kolejnego gracza (lub stop):
+Maria Zawadzka 234
+
+Podaj wynik kolejnego gracza (lub stop):
+STOP
+
+Po jakim parametrze posortować? (1 - imię, 2 - nazwisko, 3 - wynik)
+1
+
+Sortować rosnąco czy malejąco? (1 - rosnąco, 2 - malejąco)
+2
+
+Dane posortowano i zapisano do pliku stats.csv.
+
+Zawartość pliku po zapisie:
+
+Maria Zawadzka;234
+Jan Kowalski;425

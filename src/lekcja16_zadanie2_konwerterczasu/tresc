@@ -1,0 +1,30 @@
+Treść zadania
+Konwerter czasu
+Twoim zadaniem jest wczytanie od użytkownika czasu oraz wyświetlenie go w różnych strefach czasowych.
+1. Wczytywanie
+
+Data może być wczytywana na dwa sposoby:
+
+    W formacie "2022-10-23 14:15:51"
+    W formacie "2022-10-23" - wtedy przyjmujemy, że godzina to: 00:00
+    W formacie "23.10.2022 14:15:51"
+
+2. Wyświetlanie
+
+Wyświetl podany przez użytkownika czas dla:
+
+    aktualnej strefy czasowej skonfigurowanej na komputerze
+    strefy czasowej UTC
+    Londynu
+    Los Angeles
+    Sydney
+
+Przykładowe działanie programu:
+
+Podaj datę:
+2020-12-15 13:48:52
+Czas lokalny: 2020-12-15 13:48:52
+UTC: 2020-12-15 12:48:52
+Londyn: 2020-12-15 12:48:52
+Los Angeles: 2020-12-15 04:48:52
+Sydney: 2020-12-15 23:48:52
