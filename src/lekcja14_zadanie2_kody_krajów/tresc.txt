@@ -1,0 +1,41 @@
+Treść zadania
+
+Zdefiniuj plik w formacie CSV o nazwie countries.csv, który będzie przechowywał dane o państwach. Powinny znaleźć się w nim takie informacje jak:
+
+    kod kraju (np. PL, DE),
+    nazwa kraju (np. Polska)
+    liczba ludności
+
+Przykładowy rekord w pliku może więc wyglądać tak:
+
+PL;Polska;38000000
+
+Zdefiniuj w pliku co najmniej kilka takich rekordów, dane mogą być zmyślone.
+
+
+
+W programie zdefiniuj metodę, która na podstawie nazwy pliku zwróci mapę, w której kluczami będą kody krajów, natomiast wartościami będą obiekty reprezentujące kraj. Obiekty reprezentujące kraj powinny przechowywać inforamcje o kodzie, nazwie i ludności danego państwa.
+
+Po wczytaniu danych z pliku do mapy, poproś użytkownika o podanie kodu kraju, dla którego chciałby wyświetlić statystyki i je mu zaprezentuj.
+
+Przykładowy wydruk programu:
+
+Podaj kod kraju, o którym chcesz zobaczyć informacje:
+PL
+Polska (PL) ma 38000000 ludności.
+
+
+Brak pliku
+
+W przypadku braku pliku program powinien wyświetlić komunikat:
+
+Brak pliku countries.csv.
+
+I zakończyć działanie.
+
+
+Brak kraju w pliku
+
+W przypadku gdy podany kod kraju nie zostanie znaleziony w pliku program powinien wyświetlić komunikat:
+
+Kod kraju <wpisany_kod> nie został znaleziony.
