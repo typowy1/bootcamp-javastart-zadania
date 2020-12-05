@@ -1,0 +1,32 @@
+Treść zadania
+
+Ściągnij kod. Zawiera on 3 klasy modelowe:
+
+    Category - kategoria wydatku, np. wydatek na dom, jedzenie, samochód, etc
+    Coupon - kupon rabatowy, który może dotyczyć wybranej kategorii i posiada wartość w procentach
+    Product - produkt który należy do wybranej kategorii, posiada nazwę i cenę
+
+Kod zawiera również klasę PriceCalculator która ma wyliczać końcową cenę koszyka po zastosowaniu kodów rabatowych. Metoda obliczająca cenę przyjmuje jako parametry wejściowe listę produktów oraz listę kodów rabatowych. Dla PriceCalculator jest również stworzona PriceCalculatorTest która sprawdza, czy wszystko działa zgodnie z założeniami.
+
+Założenia są następujące:
+
+Brak kodów rabatowych
+
+    jeśli nie ma żadnych kodów rabatowych to wynikiem powinna być suma cen produktów
+
+Jeden kod rabatowy:
+
+    jeśli użytkownik podał kod rabatowy który nie jest przypisany do konkretnej kategorii rabat zastosowany jest do wszystkich produktów - przykładowo, mamy produkty na łączną kwotę 100zł i jeden kod rabatowy o wartości 10%, da nam to wynik 90zł
+    jeśli użytkownik podał kod rabatowy z kategorią, to znaczy, że rabat powinien zostać zastosowany tylko dla produktów z wybranej kategorii - przykładowo jeśli zakupił bułki, masło i odświeżacz powietrza i podał kod rabatowy z kategorii jedzenie to obniżona zostanie tylko cena bułki i masła
+
+Więcej niż jeden kod rabatowy:
+
+    kody rabatowe nie łączą się, a w przypadku zastosowania więcej niż jednego sklep idzie zawsze na rękę klientowi i wybiera najkorzystniejszy rabat.
+        przykład 1: masło za 6zł i opony za 100zł, oraz kody rabatowe na jedzenie o wartości 50% i na art. samochodowe 10% - wybrany zostanie kupon na art samochodowe ponieważ obniżka ot 10zł, a spożywczy dałby zniżkę 3zł.
+        przykład 2: rabat na wszystko w wysokości 10% oraz rabat na jedzenie w wysokości 50% - klient kupuje tylko artykuły spożywcze - powinien zostać zastosowany rabat na jedzenie
+
+Zadanie:
+
+    Popraw klasę PriceCalculator tak, żeby przechodziły wszystkie testy
+    Dodaj kolejne metody testowe sprawdzające czy wszystko zachowuje się zgodnie z założeniami
+    Po dodaniu testów popraw PriceCalculator tak, żeby dodane testy również przechodziły :)
