@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .col-12 label a {
+            text-decoration: none;
+        }
+
+        form {
+            width: 800px;
+            margin: 0 auto;
+            flex-direction: row;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        #addressData {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #sex {
+            margin-top: 15px;
+        }
+
+        .sex-check-input {
+            margin-left: 150px;
+        }
+
+        .col-12 {
+            margin-top: 15px;
+        }
+
+        .mb-3 {
+            margin-top: 15px;
+        }
+
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+</head>
+<body>
+<form id="form">
+    <legend>Rejestracja</legend>
+    <div class="mb-1">
+        <label class="form-label">Imię</label>
+        <input type="text" id="firstNameInput" class="form-control" placeholder="Wpisz imię" required>
+    </div>
+
+    <div class="mb-1">
+        <label class="form-label">Nazwisko</label>
+        <input type="text" id="lastNameInput" class="form-control" placeholder="Wpisz nazwisko" required>
+    </div>
+
+    <div>
+        <label id="sex">Płeć:</label>
+    </div>
+
+    <div class="sex-check">
+        <input class="sex-check-input" type="radio" name="flexRadio" id="femaleflexRadio" checked>
+        <label class="form-check-label" for="femaleflexRadio">
+            Kobieta
+        </label>
+    </div>
+
+    <div class="sex-check">
+        <input class="sex-check-input" type="radio" name="flexRadio" id="maleflexRadio">
+        <label class="form-check-label" for="maleflexRadio">
+            Mężczyzna
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Adres email</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Wpisz adres email" required>
+    </div>
+
+    <div class="mb-4">
+        <label class="form-label">Hasło</label>
+        <input type="password" class="form-control" id="passwordInput" placeholder="Hasło" required>
+        <div id="passwordHelp" class="form-text">Min. 8 znaków</div>
+    </div>
+
+    <div id="addressData">
+        <div class="col-md-6">
+            <label for="inputCity" class="address-label">Miasto</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="address-label">Województwo</label>
+            <select id="inputState" class="form-select">
+                <option selected>Wybierz...</option>
+                <option>Mazowieckie</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="address-label">Kod pocztowy</label>
+            <input type="text" class="form-control" id="inputZip" pattern="[0-9]{2}-[0-9{3}">
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="acceptanceOfTheRegulations" required>
+            <label class="form-check-label" for="acceptanceOfTheRegulations">
+                Akceptuje <a class="regulations" href="" target="_blank">regulamin</a>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="marketingConsents" checked>
+            <label class="form-check-label" for="marketingConsents">
+                Wyrażam zgodę na otrzymywanie informacji marketingowych
+            </label>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Rejestruj</button>
+    </div>
+</form>
+
+</body>
+</html> 
