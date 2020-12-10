@@ -41,4 +41,9 @@ public class PriceCalculator {
     private double round(double input) {
         return Math.round(input * 100) / 100.;
     }
+
+    //Jakby samo 1 napisac to bedzie int
+    //I masz np 1/2 to da 0 (bo utnie cześć dziesiętną)
+    //Za to 1./2 da 0.5
+    //1. to to samo co 1.0
 }
