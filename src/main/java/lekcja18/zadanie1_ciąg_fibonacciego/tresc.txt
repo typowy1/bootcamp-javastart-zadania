@@ -1,0 +1,19 @@
+Treść zadania
+
+Rozwiąż zadanie na stronie: https://projecteuler.net/problem=2
+
+Każda wartość ciągu Fibonaccicego tworzona jest poprzez dodawanie dwóch poprzednich wartości. Pierwsze wartości to 0 i 1
+
+0 + 1 = 1
+1 + 1 = 2
+1 + 2 = 3
+2 + 3 = 5
+3 + 5 = 8
+
+Więc pierwsze wartości to w takim razie:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+Rozpoczynając od 1, 2 wylicz sumę parzystych wartości ciągu Fibonacciego których wartość nie przekracza 4 milionów.
+
+Stwórz metodę która wylicza wynik zadania oraz napisz co najmniej 3 rozsądne testy sprawdzające poprawność Twojej implementacji.
