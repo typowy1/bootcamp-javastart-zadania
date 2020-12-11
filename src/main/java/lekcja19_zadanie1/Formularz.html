@@ -40,12 +40,12 @@
         <legend>Rejestracja</legend>
         <div class="mb-1">
             <label class="form-label">Imię</label>
-            <input type="text" id="firstNameInput" class="form-control" placeholder="Wpisz imię" required>
+            <input type="text" id="firstNameInput" class="form-control" placeholder="Wpisz imię" required minlength="1">
         </div>
 
         <div class="mb-1">
             <label class="form-label" id="lastNameText">Nazwisko</label>
-            <input type="text" id="lastNameInput" class="form-control" placeholder="Wpisz nazwisko" required>
+            <input type="text" id="lastNameInput" class="form-control" placeholder="Wpisz nazwisko" required minlength="1">
         </div>
         <div>
             <label id="sex">Płeć:</label>
@@ -71,7 +71,7 @@
 
         <div class="mb-4">
             <label class="form-label">Hasło</label>
-            <input type="password" class="form-control" id="passwordInput" placeholder="Hasło" required>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Hasło" required minlength="8">
             <div id="passwordHelp" class="form-text">Min. 8 znaków</div>
         </div>
         <div class="col-md-6">
@@ -81,7 +81,7 @@
         <div class="col-md-4">
             <label for="inputState" class="form-label">Województwo</label>
             <select id="inputState" class="form-select">
-                <option selected>Wybierz...</option>
+                <option selected disabled>Wybierz...</option>
                 <option>Mazowieckie</option>
             </select>
         </div>
