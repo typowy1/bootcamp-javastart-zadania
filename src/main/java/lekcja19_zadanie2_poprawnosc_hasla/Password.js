@@ -20,7 +20,7 @@ form.addEventListener('keyup', ev => {
         passwordMessages.push('Min 1 znak specjalny.');
     }
 
-    if (password.value !== confirmPassword.value) {
+    if (confirmPassword.value !== password.value) {
         confirmPasswordMessages.push('Hasła różnią się od siebie!');
     }
 
@@ -38,3 +38,4 @@ form.addEventListener('keyup', ev => {
         confirmPasswordErrorMessage.remove();
     }
 });
+
