@@ -9,7 +9,7 @@ form.addEventListener('input', ev => {
     let passwordMessages = [];
     let confirmPasswordMessages = [];
 
-    if (password.value.length < 7) {
+    if (password.value.length < 8) {
         passwordMessages.push('Za krótkie hasło. Min. 8.');
     }
 
@@ -21,17 +21,21 @@ form.addEventListener('input', ev => {
         passwordMessages.push('Min 1 znak specjalny.');
     }
 
-    if (password !== confirmPassword) {
+    if (password.value !== confirmPassword.value) {
         confirmPasswordMessages.push('Hasła różnią się od siebie!');
     }
 
     if (passwordMessages.length > 0) {
         ev.preventDefault();
         errorMessage.innerText = passwordMessages.join('\n');
+    } else {
+        errorMessage.remove();
     }
 
     if (confirmPasswordMessages.length > 0) {
         ev.preventDefault();
         confirmPasswordErrorMessage.innerText = confirmPasswordMessages.join("\n");
+    } else {
+        confirmPasswordErrorMessage.remove();
     }
 });
