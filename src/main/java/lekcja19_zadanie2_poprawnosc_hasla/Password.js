@@ -3,7 +3,6 @@ const confirmPassword = document.getElementById("confirmInputPassword");
 const errorMessage = document.getElementById("error");
 const confirmPasswordErrorMessage = document.getElementById("cerror");
 const form = document.getElementById("form");
-const input = document.getElementsByTagName("input")
 
 form.addEventListener('keyup', ev => {
     let passwordMessages = [];
