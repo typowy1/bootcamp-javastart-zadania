@@ -1,0 +1,32 @@
+Treść zadania
+
+Istnieją cztery pory roku:
+
+    wiosna
+    lato
+    jesień
+    zima
+
+Zdefiniuj typ enum o nazwie Season, w którym będą znajdowały się 4 wartości odpowiadające tym porom:
+
+    SPRING
+    SUMMER
+    AUTUMN
+    WINTER
+
+Każda wartość powinna przechowywać polską nazwę danej pory roku oraz tablicę z miesiącami, które wchodzą w skład danej pory roku (załóżmy gru, sty, lut - zima, mar, kwi, maj - wiosna, cze, lip, sie - lato, wrz, paz, lis - jesień).
+
+Wczytaj od użytkownika nazwę pory roku (po polsku, powinno działać bez względu na rozmiar liter).  Na podstawie tej nazwy pobierz odpowiadającą jej wartość typu Season, a na końcu wyświetl miesiące wchodzące w skład danej pory roku.
+
+Oczekiwane działanie programu:
+
+Podaj porę roku:
+Wiosna
+Lato
+Jesień
+Zima
+zima
+W tej porze roku są następujące miesiące:
+[grudzień, styczeń, luty]
+
+Przy wyświetlaniu dostępnych pór roku nie wypisuj ich "ręcznie", użyj pętli i przejdź po wszystkich dostępnych enumach.

@@ -1,0 +1,17 @@
+Stwórz ręcznie plik tekstowy "operations.txt" z kilkoma działaniami matematycznymi, np.:
+
+1 + 2
+2 + 2
+3 - 1
+2 * 4
+
+Następnie napisz program, w którym wczytasz powyższy plik.
+
+Oblicz wyniki wszystkich działań, wyświetl je w konsoli i zapisz do nowego pliku w postaci:
+
+1 + 2 = 3
+2 + 2 = 4
+3 - 1 = 2
+2 * 4 = 8
+
+Program postaraj się napisać w taki sposób, aby cała logika programu nie była zawarta w jednej metodzie.

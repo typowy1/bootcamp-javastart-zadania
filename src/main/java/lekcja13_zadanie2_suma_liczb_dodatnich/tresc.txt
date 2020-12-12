@@ -1,0 +1,16 @@
+Treść zadania
+
+Napisz program, w którym do listy przechowującej liczby dowolnego typu, wczytasz od użytkownika dowolną ilość liczb dodatnich.
+Wprowadzanie liczb powinno się zakończyć, gdy użytkownik poda pierwszą liczbę ujemną (liczba ta NIE powinna być dodana do listy).
+Po zakończeniu wczytywania liczb:
+
+    wyświetl je w kolejności odwrotnej niż były wprowadzone,
+    oblicz sumę i ją wyświetl w postaci a + b + c + …= x, gdzie a, b, c to liczby wprowadzone przez użytkownika a x to obliczona suma,
+    wyświetl i największą i najmniejszą z wprowadzonych liczb.
+
+Oczekiwany wynik dla liczb od 1 do 5:
+
+5, 4, 3, 2, 1
+1 + 2 + 3 + 4 + 5 = 15
+Najmniejsza liczba w liście to 1
+Największa liczba w liście to 5
