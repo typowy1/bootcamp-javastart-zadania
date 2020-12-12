@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container" style="margin: 50px auto; width: 200px">
+
+    <form>
+        <div class="form-group">
+            <label for="password1">Hasło</label>
+
+            <input type="text" id="password1" />
+            <div class="invalid-feedback" id="password1Feedback" style="display: block">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password1">Powtórz hasło</label>
+            <input type="text" id="password2" />
+            <div class="invalid-feedback" id="password2Feedback" style="display: block"></div>
+        </div>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+
+    const password1 = document.getElementById('password1');
+    const password2 = document.getElementById('password2')
+
+    checkPassword = function () {
+        const content = password1.value;
+        var message = '';
+        if (content.length < 8) {
+            message += 'Za krótkie hasło. Min. 8 znaków.<br>';
+        }
+        if (!/[A-Z]/.test(content)) {
+            message += 'Min 1 duża litera.<br>';
+        }
+        if (!/[a-z]/.test(content)) {
+            message += 'Min 1 mała litera.<br>';
+        }
+        if (!/[!@#$%^&*()<>;:'"{}\[\]]/.test(content)) {
+            message += 'Min 1 znak specjalny.<br>';
+        }
+        if(password2.value !== content) {
+            console.log(password2.value);
+            console.log(content);
+
+            document.getElementById('password2Feedback').innerHTML = 'Hasła różnią się od siebie!';
+        } else {
+            document.getElementById('password2Feedback').innerHTML = '';
+        }
+
+        document.getElementById('password1Feedback').innerHTML = message;
+    }
+
+    password1.addEventListener("keyup", checkPassword);
+    password2.addEventListener("keyup", checkPassword);
+
+
+</script>
+
+</body>
+</html>
