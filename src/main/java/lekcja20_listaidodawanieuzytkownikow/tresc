@@ -1,0 +1,22 @@
+to zadanie potrzebuje springa
+rozwiązanie jest w P:\Projekty\Bootcamp java\pl.bootcamp.javastart.zadania od 12 lekcji
+i na https://github.com/typowy1/bootcamp-javastart-lekcja20zadanie1-listaidodawanieuserow
+
+Lista i dodawanie użytkowników
+
+Treść zadania
+
+1. Stwórz klasę User która będzie reprezentowała użytkownika. Powinna mieć pola imię, nazwisko oraz wiek
+
+2. Stwórz klasę która będzie służyła do przechowywania listy użytkowników (repozytorium na dane). Oznacz ją adnotacją @Repository, aby zrobić z niej komponent Springa i w ten sposób dodawać do innych klas. W ramach konstruktora dodaj 3 testowych użytkowników. Użytkownicy mogą być przechowywani w dowolnej kolekcji.
+
+3. Stwórz kontroler i wstrzyknij repozytorium do kontrolera. W tym celu utwórz konstruktor który przyjmuje wyżej stworzone repozytorium i przypisuje je do pola klasy.
+
+4. W kontrolerze zdefiniuj metody, które obsłużą poniższe adresy:
+
+    Po wejściu na adres /users powinna zostać wyświetlona lista użytkowników
+    Pod adresem /add?imie=Daniel&nazwisko=Abacki&wiek=15 powinno być możliwe dodawanie użytkownika. Upewnij się, że nie dodasz użytkownika z pustym imieniem. Po dodaniu użytkownika powinna wyświetlić się strona success.html, a w przypadku podania pustego imienia strona err.html – oba pliki umieść w folderze static.
+
+5. Dodaj możliwość dodawania użytkowników do repozytorium za pomocą formularza i metody POST. Formularz powinien znajdować
+się na stronie głównej, czyli w pliku index.html. Tym razem przekieruj użytkownika na stronię success.html lub err.html
+zwracając tekst: "redirect:/success.html" lub "redirect:/err.html".
