@@ -45,7 +45,7 @@ DROP TABLE employees.employee;
 
 -- 9. Tworzy tabelę stanowisko (nazwa stanowiska, opis, wypłata na danym stanowisku)
 CREATE TABLE employees.employee_title(
-title_id INT NOT NULL PRIMARY KEY,
+id INT PRIMARY KEY,
 title VARCHAR(50) NOT NULL,
 description VARCHAR(200) NOT NULL,
 salary INT NOT NULL
@@ -53,7 +53,7 @@ salary INT NOT NULL
 
 -- 10 Tworzy tabelę adres (ulica+numer domu/mieszkania, kod pocztowy, miejscowość)
 CREATE TABLE employees.address(
-address_id INT NOT NULL PRIMARY KEY,
+id INT PRIMARY KEY,
 full_street_address VARCHAR(50) NOT NULL,
 zip_code INT NOT NULL,
 city VARCHAR(35) NOT NULL
@@ -61,24 +61,24 @@ city VARCHAR(35) NOT NULL
 
 -- 11. Tworzy tabelę pracownik (imię, nazwisko) + relacje do tabeli stanowisko i adres
 CREATE TABLE employees.employee(
-employee_id INT PRIMARY KEY AUTO_INCREMENT,
+id INT PRIMARY KEY AUTO_INCREMENT,
 address_id INT NOT NULL,
 title_id INT NOT NULL,
 first_name VARCHAR(30) NOT NULL,
 last_name VARCHAR(30) NOT NULL,
-FOREIGN KEY (address_id) REFERENCES address(address_id),
-FOREIGN KEY (title_id) REFERENCES employee_title(title_id)
+FOREIGN KEY (address_id) REFERENCES address(id),
+FOREIGN KEY (title_id) REFERENCES employee_title(id)
 );
 
 -- 12. Dodaje dane testowe (w taki sposób, aby powstały pomiędzy nimi sensowne powiązania)
-INSERT INTO employees.employee_title(title_id, title, description, salary)
+INSERT INTO employees.employee_title(id, title, description, salary)
 VALUES
 (1, 'Programista', 'Programuje i nie tylko', 15000),
 (2, 'Manager', 'Zarządza zespołem', 10000),
 (3, 'HR', 'Rekrutacja i kadry', 7000),
 (4, 'Tester', 'Testuje aplikacje', 12000);
 
-INSERT INTO employees.address(address_id, full_street_address, zip_code, city)
+INSERT INTO employees.address(id, full_street_address, zip_code, city)
 VALUES
 (1, 'Pełczyńskiego 30/5', 35300, 'Warszawa'),
 (2, 'Helenowska 35/79', 71900, 'Grodzisk Mazowiecki'),
@@ -95,8 +95,8 @@ VALUES
 -- 13. Pobiera pełne informacje o pracowniku (imię, nazwisko, adres, stanowisko)
 SELECT first_name, last_name, full_street_address, zip_code, city, title
 FROM employees.employee e
-JOIN employees.address a ON e.employee_id = a.address_id
-JOIN employees.employee_title t ON t.title_id = a.address_id;
+JOIN employees.address a ON e.address_id = a.id
+JOIN employees.employee_title t ON e.title_id = t.id;
 
 -- 14. Oblicza sumę wypłat dla wszystkich pracowników w firmie
 SELECT SUM(salary) AS suma_wypłat_wszystkich_pracowników FROM employee_title;
@@ -104,6 +104,6 @@ SELECT SUM(salary) AS suma_wypłat_wszystkich_pracowników FROM employee_title;
 -- 15. Pobiera pracowników mieszkających w lokalizacji z kodem pocztowym 55300
 SELECT first_name, last_name, full_street_address, zip_code, city, title, salary
 FROM employees.employee e
-JOIN employees.address a ON e.employee_id = a.address_id
-JOIN employees.employee_title t ON t.title_id = a.address_id
+JOIN employees.address a ON e.address_id = a.id
+JOIN employees.employee_title t ON e.title_id = t.id;
 WHERE zip_code = 55300;
