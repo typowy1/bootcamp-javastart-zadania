@@ -99,7 +99,8 @@ JOIN employees.address a ON e.address_id = a.id
 JOIN employees.employee_title t ON e.title_id = t.id;
 
 -- 14. Oblicza sumę wypłat dla wszystkich pracowników w firmie
-SELECT SUM(salary) AS suma_wypłat_wszystkich_pracowników FROM employee_title;
+SELECT SUM(salary) AS suma_wypłat_wszystkich_pracowników FROM employee_title t
+JOIN employees.employee e ON t.title_id = e.title_id;
 
 -- 15. Pobiera pracowników mieszkających w lokalizacji z kodem pocztowym 55300
 SELECT first_name, last_name, full_street_address, zip_code, city, title, salary
