@@ -1,0 +1,37 @@
+Treść zadania
+
+Twoim celem jest dokończenie projektu.
+
+Zadania do wykonania:
+
+    zapoznaj się z kodem źródłowym aktualnego stanu aplikacji
+    podepnij spring-data i bazy danych oraz wczytywanie danych testowych
+    usuń Twoim zdaniem niepotrzebne metody / klasy
+    dodaj możliwość sortowania po naciśnięciu wybranej kolumny (aktualnie sortują się tylko niektóre kolumny)
+    dodaj możliwość filtrowania (aktualnie filtrowanie działa tylko dla tytułów)
+
+Uwaga! Folderze resources znajduje się potencjalnie pomocny plik data.sql, który możesz użyć jako źródło danych testowych. Te same dane w innej formie znajdują się w pliku dane.csv.
+
+Punktacja (każda funkcjonalność może działać niezależnie, nie muszą wszystkie na raz)
+
+    podpięcie bazy danych i wyświetlenie wszystkich aukcji - 1 pkt
+    sortowanie - 1 pkt
+    filtrowanie - 1 pkt
+
+https://bootcamp.javastart.pl/konto/zadanie/637
+https://www.youtube.com/watch?v=J67TA8C22dY&feature=emb_title
+http://git.javastart.pl/rozwiazania/sellegro-1421948109
+P:\Projekty\Bootcamp java\Baza danych\lekcja26 zad1 sellegro
+
+Treść zadania
+
+Do aplikacji sellegro dodaj następujące funkcjonalności:
+
+    sortowanie i filtrowanie działa jednocześnie - 1 pkt
+    paginacja (podział na strony, 50 aukcji na stronie, możliwość przechodzenia do kolejnych stron) - 2 pkt
+    paginacja, sortowanie i filtrowanie działajace jednocześnie - 5 pkt
+
+https://bootcamp.javastart.pl/konto/zadanie/638
+http://git.javastart.pl/rozwiazania/sellegro-paginacja-sortowanie-filtrowanie-414124
+https://www.youtube.com/watch?v=EZvUqN-8grQ&feature=emb_title
+P:\Projekty\Bootcamp java\Baza danych\lekcja26 zad1 sellegro // tu nie jest całe
